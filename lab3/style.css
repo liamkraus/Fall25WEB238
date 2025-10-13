@@ -15,6 +15,6 @@ section { width: 90%; max-width: 900px; margin: 2rem auto; }
 .tool-logos { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
 .tool { text-align: center; }
 .tool img { width: 100px; cursor: pointer; transition: transform 0.3s; }
+/* Hover zoom effect */
 .tool img:hover { transform: scale(1.2); }
 .tool-info { display: none; text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: #333; max-width: 200px; }
-
