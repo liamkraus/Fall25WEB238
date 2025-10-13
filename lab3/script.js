@@ -1,16 +1,17 @@
 $(document).ready(function () {
 
-  // 1️⃣ Hover effect on tool logos
-  $('.tool-logos img').hover(
-    function() { $(this).css('transform', 'scale(1.2)'); },
-    function() { $(this).css('transform', 'scale(1)'); }
-  );
-
-  // 2️⃣ Slide down the importance section when clicked
+  // 1️⃣ Slide toggle the importance section when header clicked
   $('#importance h3').click(function() {
     $('#importance ul').slideToggle();
   });
 
-  // 3️⃣ Filtered selector example: highlight only list items with class "highlight"
-  $('#importance li.highlight').css('background-color', '#f0f8ff');
+  // 2️⃣ Highlight list items with class "highlight"
+  $('#importance li.highlight').css({'background-color': '#f0f8ff', 'padding': '0.3rem'});
+
+  // 3️⃣ Tool logo click toggle for descriptions
+  $('.tool img').click(function() {
+    $(this).siblings('.tool-info').slideToggle(400);
+    $(this).fadeTo(100, 0.6).fadeTo(100, 1); // subtle click animation
+  });
+
 });
