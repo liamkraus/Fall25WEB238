@@ -1,0 +1,20 @@
+body { margin: 0; font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+header { background: #111; color: #fff; padding: 1rem 0; }
+nav { display: flex; justify-content: space-between; width: 90%; margin: 0 auto; align-items: center; }
+.nav-links { list-style: none; display: flex; gap: 1.5rem; }
+.nav-links a { color: #fff; text-decoration: none; transition: color 0.3s; }
+.nav-links a:hover { color: #00b3ff; }
+
+.hero { background: #00b3ff; color: white; text-align: center; padding: 6rem 1rem; }
+.btn { background: #fff; color: #00b3ff; padding: 0.7rem 1.2rem; border-radius: 4px; text-decoration: none; display: inline-block; margin-top: 1rem; }
+
+section { width: 90%; max-width: 900px; margin: 2rem auto; }
+
+.highlight { font-weight: bold; color: #00b3ff; }
+
+.tool-logos { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.tool { text-align: center; }
+.tool img { width: 100px; cursor: pointer; transition: transform 0.3s; }
+/* Hover zoom effect */
+.tool img:hover { transform: scale(1.2); }
+.tool-info { display: none; text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: #333; max-width: 200px; }
