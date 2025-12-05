@@ -10,10 +10,34 @@ $(document).ready(function () {
 
   // Tool logo click toggle for descriptions
   $('.tool img').click(function() {
-    // Slide toggle the description for clicked tool
     $(this).siblings('.tool-info').slideToggle(400);
-    // Subtle click animation
     $(this).fadeTo(100, 0.6).fadeTo(100, 1);
+  });
+
+  // ==========================
+  // IMAGE CAROUSEL INTERACTION
+  // ==========================
+
+  let currentIndex = 0;
+  const slides = $('.carousel-image');
+
+  function showSlide(index) {
+    slides.fadeOut(300);
+    slides.eq(index).fadeIn(300);
+  }
+
+  // Next Slide
+  $('.arrow.right').click(function () {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+    $(this).animate({ opacity: 0.6 }, 100).animate({ opacity: 1 }, 100);
+  });
+
+  // Previous Slide
+  $('.arrow.left').click(function () {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+    $(this).animate({ opacity: 0.6 }, 100).animate({ opacity: 1 }, 100);
   });
 
 });
